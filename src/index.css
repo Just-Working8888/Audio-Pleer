@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar-thumb {
+  @apply bg-[#2C7873] rounded-lg;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+
+
+
+
+.loader {
+
+  transition: 1s;
+
+
+
+}
+
+
+.loader span {
+  position: absolute;
+  display: block;
+}
+
+.loader span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #6FB98F);
+  animation: animate1 2s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.loader span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(270deg, transparent, #6FB98F);
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.loader span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #6FB98F);
+  animation: animate2 2s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.loader span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #6FB98F);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+.loader h3 {
+  font-family: 'Inconsolata', monospace;
+  color: #6FB98F;
+  overflow: hidden;
+
+  letter-spacing: 2px;
+  transition: 0.5s;
+  border-right: 1px solid rgb(111, 185, 143);
+  animation: typing 5s steps(10) infinite;
+}
+
+.loader:hover h3 {
+  color: #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+@keyframes typing {
+  0%,
+  90%,
+  100% {
+    width: 0px;
+  }
+  30%,
+  60% {
+    width: 323.89px;
+  }
+}
